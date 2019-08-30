@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chpz-common" />
+        <module name="chpz-common-mapper" />
+        <module name="chpz-common-pojo" />
+        <module name="chpz-service-admin" />
+        <module name="chpz-service-admin-api" />
+        <module name="chpz-web-admin" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
