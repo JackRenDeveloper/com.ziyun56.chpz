@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>登录</title>
+<script type="text/javascript" src="../static/js/include.js?AdminLTE,validation,dvs,cookie"></script>
+<script type="text/javascript" src="../login/login.js"></script>
+<script src="//captcha.luosimao.com/static/js/api.js"></script>
+<style type="text/css">
+body{background:url(../static/images/4.jpg) no-repeat;background-size: cover;font-size: 16px;}
+.form{background: rgba(255,255,255,0.2);width:500px;margin:0 auto;margin-top:150px;}
+.form-group{height:30px;padding-right:15px}
+#loginForm{display: block;}
+#registerForm{display: none;}
+.fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}
+input[type="text"],input[type="password"]{padding-left:26px;}
+.checkbox{padding-left:21px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	login.onLoad({});
+	if (Cookies.get("user") == null || Cookies.get("user") == "") {
+		$("#mobile_phone").val("");
+		$("#password").val("");
+	} else {
+		var user = JSON.parse(Cookies.get("user"));
+		$("#mobile_phone").val(user.mobile_phone);
+		$("#password").val(user.password);
+		$("#remember").attr("checked", true);
+	}
+});
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="form row">
+		<form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="loginForm" style="padding-top:20px;"> 
+			<h3 class="form-title">登录</h3>
+			<div class="col-sm-9 col-md-9" >
+				<div class="form-group">
+					<i class="fa fa-user fa-lg"></i>
+					<input class="form-control" type="text" required="required" placeholder="请输入手机号/用户名" name="mobile_phone" id="mobile_phone" autofocus maxlength="11"/>
+				</div>
+				<div class="form-group" style="margin-bottom:38px">
+						<i class="fa fa-lock fa-lg"></i>
+						<input class="form-control" type="password" required="required" placeholder="请输入密码" id="password" name="password"/>
+				</div>
+				<!-- <div class="form-group">
+					<input id="captchaAnswer" name="captchaAnswer" required="required" placeholder="验证码" type="text" style="width: 135px;"/>
+					&nbsp;
+					<img id="captchaImage" src="" width="100" height="26" />
+				</div> -->
+				<div class="form-group">
+					<div class="l-captcha" data-site-key="f58e4bcdf5e7e15542b3af2dbd8dd1c1" data-width="100%"></div>
+				</div>
+				<div class="form-group">
+					<label class="checkbox">
+						<input type="checkbox" name="remember" id="remember"/>记住密码
+					</label>
+					<hr />
+				</div>
+				<div class="form-group" style="margin-top:45px;margin-bottom:40px">
+					<!-- <a href="javascript:void(0)" onclick="login.doRegister();" class="btn  pull-left" style="color: #fff;text-decoration: underline;">去注册</a> -->
+					<input type="button" onclick="login.doLogin();" value="登录" class="btn btn-success pull-middle" style="width: 7em;" />   
+					<!-- <input type="button" onclick="login.doWalletLogin();" value="钱包登录" class="btn btn-success pull-right" style="width: 7em;" /> -->
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

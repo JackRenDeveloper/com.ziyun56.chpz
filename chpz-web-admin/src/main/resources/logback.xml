@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+		<encoder>
+			<!-- [%thread] %caller{2} -->
+			<pattern>%date{HH:mm:ss.SSS} %-5level %class:%line | %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/com.ziyun56.chpz.info.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/com.ziyun56.chpz.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} %-5level %class:%line | %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/com.ziyun56.chpz.warn.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/com.ziyun56.chpz.warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} %-5level %class:%line | %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/com.ziyun56.chpz.error.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/com.ziyun56.chpz.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} %-5level %class:%line | %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!--<appender name="OA_INFO" class="com.ziyun56.common.service.log.OAAppender">
+		<appName>com.ziyun56.chpz</appName>
+		<url>http://192.168.2.110:56513/alert/webhook.json</url>
+		<accessToken>N/A</accessToken>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} %-5level %class:%line | %msg%n</pattern>
+		</encoder>
+	</appender>-->
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE_INFO" />
+		<appender-ref ref="FILE_WARN" />
+		<appender-ref ref="FILE_ERROR" />
+		<!--<appender-ref ref="OA_INFO" />-->
+	</root>
+
+</configuration>

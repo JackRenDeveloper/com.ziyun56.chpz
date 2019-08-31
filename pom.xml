@@ -21,6 +21,7 @@
         <module>chpz-common-pojo</module>
         <module>chpz-service-admin-api</module>
         <module>chpz-service-admin</module>
+        <module>chpz-web-admin</module>
     </modules>
 
     <dependencies>
@@ -365,7 +366,16 @@
             <version>5.14.0</version>
         </dependency>
 
-
     </dependencies>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
 </project>

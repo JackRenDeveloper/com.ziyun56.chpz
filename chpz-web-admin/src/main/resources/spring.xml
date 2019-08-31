@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jms="http://www.springframework.org/schema/jms"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd 
+		http://www.springframework.org/schema/jdbc 
+		http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jms
+		http://www.springframework.org/schema/jms/spring-jms.xsd">
+
+	<!-- Config -->
+	<context:property-placeholder location="classpath:application.properties"
+		ignore-resource-not-found="true" />
+
+	<!-- URL Mapping -->
+	<util:properties id="url_mapping" location="classpath:url_mapping.properties" />
+
+	<!-- Session Storage -->
+	<bean id="sessionStorage" class="com.devinsor.web.session.RedisSessionStorage">
+		<property name="redisService" ref="redisService" />
+	</bean>
+
+	<!-- Redis -->
+	<bean id="redisService" class="com.devinsor.service.data.RedisServiceImpl" init-method="init">
+		<property name="host" value="${com.ziyun56.chpz.redis.host}" />
+		<property name="port" value="${com.ziyun56.chpz.redis.port}" />
+		<property name="ssl" value="${com.ziyun56.chpz.redis.ssl}" />
+		<property name="password" value="${com.ziyun56.chpz.redis.password}" />
+		<property name="database" value="2" />
+		<property name="clientName" value="com.ziyun56.chpz" />
+	</bean>
+
+	<!-- MongoDB -->
+	<bean id="mongoDBDataService" class="com.devinsor.service.data.MongoDBDataServiceImpl" init-method="init" destroy-method="destroy">
+		<property name="host" value="${com.ziyun56.chpz.mongodb.host}" />
+		<property name="port" value="${com.ziyun56.chpz.mongodb.port}" />
+		<property name="database" value="${com.ziyun56.chpz.mongodb.database}" />
+		<property name="user" value="${com.ziyun56.chpz.mongodb.user}" />
+		<property name="password" value="${com.ziyun56.chpz.mongodb.password}" />
+	</bean>
+
+	<!-- JMS ActiveMQ -->
+	<bean id="activeMQConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="${com.ziyun56.chpz.activemq.brokerURL}" />
+        <property name="userName" value="${com.ziyun56.chpz.activemq.userName}" />
+        <property name="password" value="${com.ziyun56.chpz.activemq.password}" />
+	</bean>
+	<bean id="cachingConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="targetConnectionFactory" ref="activeMQConnectionFactory" />
+	</bean>
+	<bean id="seriaMessageConverter" class="com.devinsor.jms.SeriaMessageConverter">
+	</bean>
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="cachingConnectionFactory" />
+		<property name="messageConverter" ref="seriaMessageConverter" />
+	</bean>
+	<bean id="jmsPubSubDomainTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="cachingConnectionFactory" />
+		<property name="messageConverter" ref="seriaMessageConverter" />
+		<property name="pubSubDomain" value="false" />
+	</bean>
+
+	<!-- DVS Service -->
+	<bean id="gridFSService" class="com.devinsor.service.data.GridFSServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+	</bean>
+	<bean id="directoryService" class="com.devinsor.service.directory.DirectoryServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+	</bean>
+	<bean id="cityDirectoryService" class="com.devinsor.service.directory.DirectoryServiceImpl">
+		<property name="table" value="dvs_directory_city_l5" />
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+	</bean>
+	<bean id="envDirectoryService" class="com.devinsor.service.directory.DirectoryServiceImpl">
+		<property name="table" value="dvs_directory_env" />
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+	</bean>
+	<bean id="logService" class="com.devinsor.service.log.LogServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+	</bean>
+	<bean id="roleService" class="com.devinsor.service.role.RoleServiceImpl">
+		<property name="directoryService" ref="directoryService" />
+	</bean>
+
+	<bean id="templateService" class="com.devinsor.service.template.TemplateServiceImpl">
+		<property name="directoryService" ref="directoryService" />
+	</bean>
+	<bean id="webSocketService" class="com.devinsor.service.websocket.WebSocketServiceImpl">
+	</bean>
+	<bean id="messageService" class="com.devinsor.service.message.MessageServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+		<property name="templateService" ref="templateService" />
+		<property name="jmsTemplate" ref="jmsTemplate" />
+		<property name="webSocketService" ref="webSocketService" />
+		<property name="messageReceiveService" ref="messageReceiveService" />
+		<property name="messageGroupService" ref="messageGroupService" />
+	</bean>
+	<bean id="messageReceiveService" class="com.devinsor.service.message.MessageReceiveServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+		<property name="templateService" ref="templateService" />
+		<property name="messageService" ref="messageService" />
+	</bean>
+	<bean id="messageGroupService" class="com.devinsor.service.message.MessageGroupServiceImpl">
+		<property name="mongoDBDataService" ref="mongoDBDataService" />
+		<property name="templateService" ref="templateService" />
+	</bean>
+
+	<!-- DVS Action -->
+	<bean id="directory" class="com.devinsor.service.directory.DirectoryAction">
+		<property name="directoryService" ref="directoryService" />
+		<property name="roleService" ref="roleService" />
+	</bean>
+
+	<bean id="fs" class="com.devinsor.action.FileSystemAction">
+		<property name="gridFSService" ref="gridFSService" />
+	</bean>
+
+	<bean id="ueditor" class="com.devinsor.action.UeditorAction">
+	</bean>
+
+	<bean id="login" class="com.ziyun56.com.web.admin.login.LoginAction">
+	</bean>
+	<bean id="message_receive" class="com.devinsor.service.message.MessageReceiveAction">
+		<property name="messageReceiveService" ref="messageReceiveService" />
+	</bean>
+	<bean id="message_group" class="com.devinsor.service.message.MessageGroupAction">
+		<property name="messageGroupService" ref="messageGroupService" />
+	</bean>
+
+	<bean id="admin" class="com.ziyun56.com.web.admin.action.AdminAction">
+	</bean>
+
+
+</beans>

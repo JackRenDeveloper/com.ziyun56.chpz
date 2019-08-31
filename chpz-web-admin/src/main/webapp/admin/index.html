@@ -1,0 +1,210 @@
+<!-- #set(Map user) -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>货安宝管理后台</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<script type="text/javascript" src="../static/js/include.js?AdminLTE,perfectscrollbar,dvs"></script>
+<script type="text/javascript" src="../admin/index.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var height = $(window).height() - 86;
+		$("#mainFrame").height(height);
+		$("#tabContent").height(height - 60);
+		$("#sidebar").height(height);
+		$("#sidebarMenu").height(height);
+		$("#sidebarMenu").perfectScrollbar();
+		adminIndex.onLoad();
+		$(window).resize();
+	});
+</script>
+<style type="text/css">
+#headMenuLabel {
+	color: #FFF;
+	font-size: 20px;
+	margin-top: 13px;
+	width: 300px;
+	float: left;
+}
+
+.content {
+	padding: 0px;
+}
+
+.nav-tabs-custom {
+	margin-bottom: 0px;
+}
+
+.main-footer {
+	padding: 5px;
+}
+
+.top-right-btns {
+	float: right;
+	margin-top: 12px;
+	margin-right: 10px;
+}
+
+.top-right-btn {
+	color: #ffffff;
+	background-color: #3C8DBC;
+	border: 1px solid #ffffff;
+}
+
+.top-right-btn:hover {
+	background-color: #367FA9;
+}
+
+.nav-tabs li span.fa-times {
+	display: none;
+}
+
+.nav-tabs li.active span.fa-times {
+	display: inline-block;
+	cursor: pointer;
+}
+</style>
+</head>
+<body class="skin-blue sidebar-mini">
+	<div class="wrapper">
+		<header class="main-header">
+			<!-- Logo -->
+			<a href="/" class="logo">
+				<!-- mini logo for sidebar mini 50x50 pixels -->
+				<span class="logo-mini">
+					<b>紫云</b>
+				</span>
+				<!-- logo for regular state and mobile devices -->
+				<span class="logo-lg">
+				<!-- #if(session.lang != "jinyintong") -->
+					<b>紫云</b>
+					<!-- #else -->
+					<b>金银通</b>
+					<!-- #end -->
+					车货配载
+				</span>
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+				</a>
+				<div id="headMenuLabel"></div>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/help/operator_documentation.html">操作文档</a>
+						</li>
+						<li>
+							<a href="/front/index.html">前台首页</a>
+						</li>
+						<!-- User Account: style can be found in dropdown.less -->
+
+						<li class="dropdown user user-menu">
+
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="../static/images/avatar5.png" class="user-image" alt="User Image">
+								<span class="hidden-xs">${user.mobile_phone}</span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header">
+									<img src="../static/images/avatar5.png" class="img-circle" alt="User Image">
+									<p>
+										紫云股份有限公司
+										<small>2016</small>
+									</p>
+								</li>
+								<!-- Menu Body -->
+								<!-- Menu Footer-->
+								<li class="user-footer">
+									<div class="pull-right">
+										<a class="btn btn-default btn-flat btn-esc" href="javascript:;" onclick="adminIndex.doLogout();">退出</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<!-- =============================================== -->
+
+		<!-- Left side column. contains the sidebar -->
+		<aside class="main-sidebar">
+			<!-- sidebar: style can be found in sidebar.less -->
+			<section class="sidebar" style="height: auto;" id="sidebar">
+				<!-- sidebar menu: : style can be found in sidebar.less -->
+				<ul class="sidebar-menu" id="sidebarMenu" data-ps-xRailOffset-bottom="0" data-ps-yRailOffset-top="50">
+					<!-- #set(List menus) -->
+					<!-- #for(Map menu : menus) -->
+					<li class="treeview">
+						<a href="javascript:;">
+							<i class="fa fa-folder"></i>
+							<span>${menu.name}</span>
+						</a>
+						<!-- #set(List children = menu.children) -->
+						<ul class="treeview-menu">
+							<!-- #for(Map childMenu : children) -->
+							<!-- #if(childMenu.name == "即时通讯") -->
+							<li>
+								<a href="${childMenu.value}" target="_blank">
+									<i class="fa fa-circle-o"></i>
+									${childMenu.name}
+								</a>
+							</li>
+							<!-- #else -->
+							<li>
+								<a href="javascript:;" target="mainFrame" onclick="adminIndex.openTab(this, '${childMenu.id}', '${childMenu.name}', '${childMenu.value}');">
+									<i class="fa fa-circle-o"></i>
+									${childMenu.name}
+								</a>
+							</li>
+							<!-- #end -->
+							<!-- #end -->
+						</ul>
+					</li>
+					<!-- #end -->
+				</ul>
+			</section>
+		</aside>
+
+		<!-- =============================================== -->
+
+		<!-- One page content -->
+		<div class="content-wrapper" style="min-height: 1096px; display: none;">
+			<section class="content">
+				<iframe id="mainFrame" name="mainFrame" src="" style="overflow: visible;" width="100%" height="550" frameborder="no" border="0"></iframe>
+			</section>
+		</div>
+
+		<!-- Multi pages content -->
+		<div class="content-wrapper" style="min-height: 1096px;">
+			<section class="content">
+				<div class="nav-tabs-custom">
+					<ul class="nav nav-tabs" id="navTabs"></ul>
+					<div class="tab-content" id="tabContent" style="padding-top: 2px;"></div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">
+				<b>Version</b>
+				1.0.0
+			</div>
+			<strong>
+				Copyright © 2017
+				<a href="http://www.ziyun56.com/" target="_blank">ziyun56.com</a>
+				.
+			</strong>
+			All rights reserved.
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.ziyun56.common">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/com.ziyun56.common.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

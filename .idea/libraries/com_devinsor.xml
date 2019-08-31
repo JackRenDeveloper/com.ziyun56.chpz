@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com-devinsor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/com-devinsor.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
