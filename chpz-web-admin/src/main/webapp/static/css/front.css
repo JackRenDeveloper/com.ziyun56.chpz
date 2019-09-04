@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login-box, .register-box {margin: 5px auto;}
+.evaluate {margin-top:50px;}
+.evaluate label{line-height:50px;}
+.evaluate .indent{width:70px;}
+.evaluate .tijiao{width:100px;margin-bottom:10px;}
+.evaluate textarea{width:275px;height:80px;}
+/*order_list*/
+.order_title{border:solid #ccc 1px;}
+.order_title .active{background: #58a5da;}
+.order_title .active a{color:#fff;}
+.order_title div{border-right:solid #ccc 1px; text-align:center;}
+.order_title .border-right{border-right:none;}
+.tab-content{margin-top: 20px; margin-left: 30px;}

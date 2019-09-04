@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+/*user_list*/
+.check_btn{ padding:4px 15px; float:left;}
+.control-label{margin-bottom: 0;padding-top: 7px; text-align:right;}
+.user-list{padding-top: 1em;}
+.user-list .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8, .col-md-9,.col-md-10,.col-md-11,.col-md-12
+.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8, .col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12
+.col-md-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8, .col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{
+ padding-left:5px;padding-right:5px;
+}
+.mtable .mmGrid .mmg-bodyWrapper .mmg-body td {
+    padding: 1px 2px !important;
+    
+}
+.padding-fluid .navbar {
+    margin-bottom: 5px !important;
+}
+.senor_map body {
+    margin-top: -14px;
+}
+
+.user-list.user-list-form{padding-top:0.8em; padding-bottom:0.2em;}
+.user-list-mg{margin-top: 2px;}
+.user-list-tab{text-align: right;}
+
+
+/*login.v2*/
+.login-page {
+	background:url(../../image/login_pic2.jpg) no-repeat;
+	background-size: 100%;
+}
+.lenglian-logo{ margin-left:20px; margin-top:30px;}
+.lenglian-logo img{width:220px;}
+.login-box {
+	width: 450px;
+	}
+@media screen and (min-width: 960px) {
+	.login-box {
+	width: 450px;
+	margin-top:-35px;
+}
+.lenglian-logo{ margin-left:20px; margin-top:40px;}
+.login-logo{margin-bottom:60px;}
+}
+.login-logo img{width:360px;}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	.login-box {
+	width: 400px;
+	margin-top:-42px;
+}
+.lenglian-logo{ margin-left:20px; margin-top:30px;}
+.lenglian-logo img{width:160px;}
+.login-logo{margin-bottom:70px;}
+.login-logo h1{font-size:32px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	.login-page {
+	background:url(../../image/login_pic2.jpg) no-repeat;
+}
+	.login-box {
+	width: 350px;}
+	.login-logo{margin-top:-22px;}
+	.login-logo img{width:320px;}
+	.lenglian-logo{ margin-left:20px; margin-top:30px;}
+    .lenglian-logo img{width:160px;}
+    .login-logo{margin-bottom:60px;}
+
+}
+@media only screen and (max-width: 479px) {
+		.login-page {
+	background:url(../../image/login_pic2.jpg) no-repeat;
+}
+	.login-box {width: 300px;}
+	.login-logo{margin-top:-15px;}
+	.login-logo img{width:260px;}
+	.lenglian-logo{ margin-left:20px; margin-top:30px;}
+    .lenglian-logo img{width:140px;}
+    .login-logo{margin-bottom:60px;}
+}
+.login-logo h1{ color:#124072;}
+.loginV2-btn{height:2.2em; width:5em;line-height:1.2em;}
+
+
+/*user_update*/
+.user-update{margin-top: 1.5em;}
+
+
+/*record_info*/
+.record_info{width:96%; margin:0 auto;}
+.record_info table th{text-align:center;}
+.record_info table{ text-align:center; margin-top:20px;}
+.record_info table caption{text-align:center; background:#827ec3; color:#ffffff; font-size:16px; height:2.5em;line-height:2.5em;}
+.record_info table tr{ background:#ECF0F5; border:none;}
+.record_info table th{font-size:14px; border-right:#C5DFED solid 1px; margin-left:-1px;}
+.record_info table td{border-right:#C5DFED solid 1px; margin-left:-1px;}
+
+/*express_table_template*/
+.express_table td{ background:#ffffff;}
+
+.first_td{width:460px;}
+.second_td{width:260px;}
+.third_td{width:90px;}
+
+/*record_update*/
+.updck input{margin-top:10px !important;}

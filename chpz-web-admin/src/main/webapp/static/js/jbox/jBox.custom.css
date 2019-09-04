@@ -1,0 +1,5 @@
+.jBox-Notice .jBox-container {
+	box-shadow: 0 0 0 rgba(0, 0, 0, .2);
+	background: transparent;
+	background-image: none;
+}

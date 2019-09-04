@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.about img{width:100%}
+.about-us{border:#e5e5e5 solid 1px; padding-left:80px;padding-right:80px; color:#555555;padding-top:60px; line-height:24px;padding-bottom:30px;margin-bottom:30px;}
+.about-us h3{display:inline;color:#2087ce;padding-bottom:20px;}
+.about-us h4{display:inline;}
+.about-us h4 a{color:#2087ce;}
+.about-us .contract-way{margin-top:50px;}
+.about-us .contract-way .line{margin-bottom:30px;}
+.about-us .contract-way img{width:100%;}
+.about-us .contract-way i{margin-top:30px;display:block;font-size:28px;}
+.about-us .contract-way i a{color:#eda306;}
+@media ( max-width : 996px) {
+  .about-us .contract-way p{line-height:18px;}
+  .about-us .contract-way i{margin-top:10px;display:block;font-size:20px;}
+}
+.abstract{background:#F6F7F9; padding-top:50px; padding-bottom:50px;}
+.abstract p {line-height: 35px;color: #666;font-size: 16px;text-indent: 2em;margin-bottom: 28px; }
+.title_deline {display: block;width: 65px;height: 4px;background: #ff5900;margin: 20px auto 40px;}
+.introduce{padding-top:50px; padding-bottom:50px;}
+.introduce p {line-height: 35px;color: #666;font-size: 16px;text-indent: 2em;margin-bottom: 28px;}
+.about_contact{ text-align:center;}
+.about_contact .img_radius{ border-radius:50%;}
+.introduce a{color:#0D0B0B; margin-left:30px;}
+.abstract_contact{ padding-top:80px;}
+.about h2{font-weight:700; margin-bottom:20px; margin-top:40px;}
+.about p{font-size:18px; line-height:28px;}
+
+.contact img{width:100% !important;}
+.contact h4{text-align:center;}

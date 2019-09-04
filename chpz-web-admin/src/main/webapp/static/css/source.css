@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+.abstract{margin-top:20px;}
+.tran_title{ line-height:32px; border-bottom:#CCCCCC solid 1px;}
+.tran_title span{ margin-top:50px; margin-bottom:10px;}
+.vertical{vertical-align:middle;}
+.info_peo span{ display:block; line-height:24px;}
+.tran_content{padding-top:20px; padding-bottom:20px; border-bottom:#DDDDDD solid 1px;}
+.btn-more{ border:#dddddd solid 1px; margin-top:20px;}
+.bor-right{border-right:#dddddd solid 1px;}
+.magn{margin-bottom:5px;}
+.myStyle{margin:0 auto; width:300px;margin-top:25px;}
+/*fillFullOrder*/
+.order h3{ font-weight:600; border-bottom: #fff0ff solid 1px; line-height: 50px;}
+.cue{background: #FFFDEF; line-height:44px; border:#FEE4BB solid 1px; color:#ff00f0;}
+.history{background: #E4E4E4;line-height:54px; margin-top: 10px; margin-bottom: 10px;}
+.shipper label{text-align: right; padding-top:7px;}
+.shipper textarea{vertical-align: top; resize:none;padding: 0 0;resize: none;height: 60px;}
+.shipper{ border:solid #ccc 1px; padding-bottom: 10px;border-top:none;}
+.info_title h4{display: inline-block; margin-left:20px; padding-top:5px;font-weight:600;}
+.info_title span{color: #ccc; margin-left: 10px;}
+.remarkWar .active { background:#3c8dbc;color: #fff !important;border-color: #3c8dbc !important;}
+.item_tag {float: left;padding: 3px 5px;color: #333; border: solid 1px #e0e0e0;margin: 5px;cursor: pointer;border-radius: 4px;}
+.items .remarkWar textarea{ margin-top: 10px; height: 100px; border:solid 1px #ccc; margin-left:5px;}
+@media screen and (min-width: 992px) { 
+.bor_l{border-left:none;border-top:solid #ccc 1px;}
+} 
+.bor_t{border-top:solid #ccc 1px;}
+.marg_b{margin-bottom:20px;}
+
+.select-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+.lineh{padding-top:7px; font-size:12px;}
+.car_radio{margin-top:7px;}
+.bottom{background:#585858;line-height:40px;color:#fff;}
+.bottom a{color:#fff; margin-right:20px;}
+.ite{
+    text-align: center;
+}
+.dev{
+    border: 1px solid #000000;
+    height:80px;
+    line-height: 78px;
+}
+/*.dev>div{*/
+    /*height:60px;*/
+    /*line-height: 65px;*/
+/*}*/

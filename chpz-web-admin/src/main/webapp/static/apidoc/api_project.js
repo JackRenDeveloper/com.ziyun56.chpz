@@ -1,0 +1,21 @@
+define({
+  "name": "chpz-apidoc",
+  "version": "0.0.0",
+  "description": "chpz-apidoc",
+  "title": "chpz-apidoc",
+  "url": "https://dev.ziyun56.com:56282",
+  "sampleUrl": "https://dev.ziyun56.com:56282",
+  "header": {
+    "title": "chpz-apidoc"
+  },
+  "footer": {
+    "title": "chpz-apidoc"
+  },
+  "apidoc": "0.2.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2017-11-15T01:47:05.427Z",
+    "url": "http://apidocjs.com",
+    "version": "0.16.1"
+  }
+});

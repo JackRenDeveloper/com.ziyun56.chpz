@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.clear{clear: both;}
+#map{margin-top:0px;z-index:999;}
+.shuju{z-index:9999;background:url(/static/images/bdmap/mapbg.png) repeat-x;padding-top:20px; margin-top:-5px;}
+
+.shuju .truck .num .number{ font-size:20px; color:#ffd201; float: left; tex-align:center;}
+.shuju .truck .num .number .tibg{color: #fff; text-align: center;display: block;background:#6a0101; border-radius:15px; border:#fff solid 1px;}
+.shuju .truck .num .number p{margin-top: 5px;text-align: center;}
+.shuju .total span{display:block;}
+.shuju .basic{background:url(/static/images/bdmap/hzbg.png) repeat-x;padding-top:10px; margin-top:-20px;padding-bottom:10px;border-left:#d7a7a7 solid 1px;border-right:#d7a7a7 solid 1px;}
+.shuju .total{font-size:22px; text-align:center;color:#ff3838;}
+.shuju .time{color:#e9930d;text-align:center;display:inline-block !important;}
+.shuju .jiaoyi{color:#e9930d;}
+.shuju .jiaoyi_right{color:#e9930d;text-align:right;}
+.shuju .danzi{font-size:16px;color:#fff;}
+.wlmap section{position:relative;}
+.fullscreen{background:#a30bcf;border:#fff solid 1px; border-radius:10px; color:#fff;display:inline-block; width:60px; text-align:center;}
+.fulscreen{background:#a30bcf;border:#fff solid 1px; border-radius:10px; color:#fff;display:inline-block; width:80px; text-align:center;}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+.control-label{ text-align:right; line-height:2em;}
+.space{margin-bottom: 5px;}
+.portrait_nav{ background:#567fc0; height:80px; color:#fff;}
+.portrait_nav a{color: #fff;}
+.portrait_nav .mt-nav li{line-height: 80px; font-size: 18px; text-align: center;}
+.portrait_nav .mt-nav .title{ font-size:30px; line-height: 70px; text-align: left;}
+.portrait_nav .mt-nav .selected a{ color:#ff4401;}
+.member{background: #f5f8fa; padding:10px 0 10px ; border:#CCCCCC 1px solid; margin-top:20px;}
+.user{border-bottom:#CCCCCC 1px solid; background: #f5f8fa; padding:10px 0 10px ; border:#CCCCCC 1px solid; margin-top:20px;}
+.user_id{margin-top:20px;display:block;}
+.portrait{ border-radius:50%; width:80px;height:80px;}
+.user_list{background: #f5f8fa; border:#CCCCCC 1px solid; border-top:none; padding-top:5px;padding-bottom:5px;}
+.user_list ul{margin-left: -40px;}
+.user_list li{line-height: 30px; text-align: center; }
+.user_list .bor_right{border-right:#CCCCCC 1px solid;}
+/*物流列表*/
+.s-content{margin-top:10px;}
+.m-logistics{margin-top:20px;}
+.m-logistics .s-bar{color: #546d7e;padding: 10px;background: #f5f8fa;border:#ccc solid 1px;}
+.m-logistics .s-bar img{ width: 32px; margin-right: 10px;}
+.m-logistics .s-content .lg-list .lg-item{border:#ccc solid 1px; border-top: none; padding-top: 10px; padding-bottom: 10px;}
+.m-logistics .lg-confirm{margin-top: 20px;}
+/*账户详情*/
+.account .nav-tabs{margin-top: 10px;}
+.account table caption{font-size: 18px;}
+ .account table th{width: 90px; padding-top: 20px; font-weight: 400;}
+.account table td{padding-top: 20px;}
+.account table input{width: 180px; height:30px;}
+.account table select{width: 180px;}
+.tab-content{margin-top: 20px; margin-left: 30px;}
+#uploader-demo .local input{ margin-top: 20px; margin-bottom: 10px; width:150px;}
+#uploader-demo .uploadimg{width: 300px; height: 300px; border: #cccccf solid 1px; }
+#uploader-demo .uploadimg img{ width: 300px; height: 300px; border-radius: 50%;padding: 10px;}
+.identify input{ margin-top: 20px; margin-bottom: 10px; width:150px;}
+.identify .uploadimg{width: 300px; height: 240px; border: #cccccf solid 1px; }
+.identify .uploadimg img{ width: 300px; height: 240px; padding: 10px;}
+
+.account_tel .mt-nav li{float: left; width: 120px;}
+.tel{margin-top: 20px; margin-bottom: 20px;}
+.tx img{ width:150px; height:150px;}

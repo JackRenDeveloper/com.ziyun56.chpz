@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+#allmap{width:100%;height:500px;}
+p{margin-left:5px; font-size:14px;}
+.box1{background:url(../images/shebei.png) -0px 0px no-repeat;width:30px;height:30px;}
+.box2{background:url(../images/shebei.png) -30px 0px no-repeat;width:30px;height:30px;}
+.box3{background:url(../images/shebei.png) -60px 0px no-repeat;width:30px;height:30px;}
+.box4{background:url(../images/shebei.png) -90px 0px no-repeat;width:30px;height:30px;}
+.box5{background:url(../images/shebei.png) -120px 0px no-repeat;width:30px;height:30px;}
+.storage1{background:url(../images/shebei.png) -0px -30px no-repeat;width:30px;height:30px;}
+.storage2{background:url(../images/shebei.png) -30px -30px no-repeat;width:30px;height:30px;}
+.storage3{background:url(../images/shebei.png) -60px -30px no-repeat;width:30px;height:30px;}
+.storage4{background:url(../images/shebei.png) -90px -30px no-repeat;width:30px;height:30px;}
+.storage5{background:url(../images/shebei.png) -120px -30px no-repeat;width:30px;height:30px;}
+.truck1{background:url(../images/shebei.png) -0px -60px no-repeat;width:30px;height:30px;}
+.truck2{background:url(../images/shebei.png) -30px -60px no-repeat;width:30px;height:30px;}
+.truck3{background:url(../images/shebei.png) -60px -60px no-repeat;width:30px;height:30px;}
+.truck4{background:url(../images/shebei.png) -90px -60px no-repeat;width:30px;height:30px;}
+.truck5{background:url(../images/shebei.png) -120px -60px no-repeat;width:30px;height:30px;}
+.warehouse1{background:url(../images/shebei.png) -0px -90px no-repeat;width:30px;height:30px;}
+.warehouse2{background:url(../images/shebei.png) -30px -90px no-repeat;width:30px;height:30px;}
+.warehouse3{background:url(../images/shebei.png) -60px -90px no-repeat;width:30px;height:30px;}
+.warehouse4{background:url(../images/shebei.png) -90px -90px no-repeat;width:30px;height:30px;}
+.warehouse5{background:url(../images/shebei.png) -120px -90px no-repeat;width:30px;height:30px;}
+.team1{background:url(../images/shebei.png) -0px -124px no-repeat;width:30px;height:30px;}
+.team2{background:url(../images/shebei.png) -30px -124px no-repeat;width:30px;height:30px;}
+.team3{background:url(../images/shebei.png) -60px -124px no-repeat;width:30px;height:30px;}
+.team4{background:url(../images/shebei.png) -90px -124px no-repeat;width:30px;height:30px;}
+.team5{background:url(../images/shebei.png) -120px -124px no-repeat;width:30px;height:30px;}

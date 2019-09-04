@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+/*order_detail*/
+.order{margin-bottom:20px;}
+.detail_nav{ line-height:30px;}
+.shipper label{text-align: right;font-weight:500;color:#567fc0;}
+.space{padding-bottom: 10px;}
+.shipper{ border:solid #ccc 1px; padding-bottom: 10px;border-top:none;}
+.info_title h4{display: inline-block; margin-left:20px; padding-top:5px;font-weight:500; color:#ff00f0}
+@media screen and (min-width: 992px) { 
+.bor_l{border-left:none;border-top:solid #ccc 1px;}
+} 
+.bor_t{border-top:solid #ccc 1px;}
+.marg_b{margin-bottom:20px;}
+.good img{width: 70px; height: 70px;}

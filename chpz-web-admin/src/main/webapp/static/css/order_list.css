@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.space{margin-bottom: 5px;}
+.portrait_nav{ background:#567fc0; height:80px; color:#fff;}
+.portrait_nav a{color: #fff;}
+.portrait_nav .mt-nav li{line-height: 80px; font-size: 18px; text-align: center; list-style:none;}
+.portrait_nav .mt-nav .title{ font-size:30px; line-height: 70px; text-align: left;}
+.portrait_nav .mt-nav .selected a{ color:#ff4401;}
+.user_list{ background: #f5f8fa;border-bottom:#CCCCCC 1px solid; margin-top:20px;}
+.user_list div{line-height: 30px; margin-top:5px;text-align: center;}
+.user_list .bor_right{border-right:#CCCCCC 1px solid;}
+.user_list .active{border-bottom: #567fc0 solid 3px;}
+.order_title{ text-align: center; line-height: 40px; margin-top: 20px;}
+.order_title table{background-color: #f5f5f5;border: 1px solid #e8e8e8;}
+/*物流列表*/
+.m-logistics{margin-top:20px; }
+.m-logistics .s-bar{color: #546d7e;padding: 10px;background: #f5f8fa;border:#ccc solid 1px; margin-top:10px;}
+.m-logistics .s-bar span{ margin-right: 20px; margin-left:10px;}
+.m-logistics .s-bar label{margin-right: 20px;}
+.m-logistics .s-content .lg-list{ text-align: center;}
+.m-logistics .lg-list{ text-align: center;}
+.m-logistics .s-content .lg-list .lg-item{border:#ccc solid 1px; border-top: none; padding-top: 10px; padding-bottom: 10px;}
+.m-logistics .lg-list .lg-item{border:#ccc solid 1px; border-top: none; padding-top: 10px; padding-bottom: 10px;}
+.m-logistics .s-content .lg-list .lg-item .lg-info{ line-height: 80px;}
+.m-logistics .lg-list .lg-item .lg-info{ line-height: 80px;}
+.m-logistics .s-content .lg-list .item-info img{max-width: 100px; max-height:80px; margin-top:5px;}
+.m-logistics .lg-list .item-info img{max-width: 100px; max-height:80px; margin-top:5px;}
+.m-logistics .lg-confirm{margin-top: 5px;}
+.text-left{text-align:left;}
+/*truck_list*/
+.m-logistics .s-bar .car{ margin-left:10px;}
+/*route_list*/
+.m-logistics .s-content .route p{line-height:24px !important; }
+.m-logistics .s-content .route .lg-item{padding-bottom: 0;}
+.m-logistics .s-content .route .lg-item .lg-info{ line-height: 60px;}
+.edit .control-label{ text-align:right; line-height:2em;}
+
+/*order_detail*/
+.order_detail table caption{background: #F3F3F3;border:solid 1px #ccc; border-bottom: none;}
+.order_detail table td{word-break:break-all; word-wrap:break-word; padding-top:10px; padding-right:10px;}
+.order_detail table th{width: 90px; padding-left: 10px ; padding-top:10px; }
+.order_detail table{ border: #ccc solid 1px;}
+.detail_nav{ line-height:30px;}
+/*requirement_list*/
+.box-title .lg-list{ text-align: center; font-size:14px;}
+.box-title .lg-list .lg-item{ border-top: none; padding-top: 10px; padding-bottom: 10px;}
+.box-title .lg-list .lg-item .lg-info{ line-height: 40px;}
+.box-title .lg-list .item-info img{max-width: 100px; max-height:80px; margin-top:5px; margin-right:5px;}
+.box-white{border-top:#fff solid 1px;}
+/*新增路线*/

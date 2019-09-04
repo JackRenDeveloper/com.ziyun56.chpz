@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.skin-light-blue .magn-left{margin-left:10px;}
+.skin-light-blue .magn-right{margin-right:10px;}
+.skin-light-blue .space-top{margin-top:10px;}
+.skin-light-blue .banner{background-color: #2087ce; border-top:solid #fff 1px;}
+.skin-light-blue .banner img{width:100%;}
+.skin-light-blue .half{border:#e5e5e5 solid 1px; padding:20px; margin-top:20px;border-radius:10px; padding-top:0px;margin-bottom:20px;}
+.skin-light-blue .half h3{color:#2087ce;}
+.skin-light-blue .half h4{color:#eab000; margin-top:0px;}
+.font-grey{color:#727272;}
+.font-green-leight{color:#a5cb3b;}
+.skin-light-blue .qr-code img{width:100%;}
+.skin-light-blue .btn-android{background:#459708; color:#fff; text-align:center; border:#327301 solid 1px; border-radius:25px;}
+.skin-light-blue .btn-apple{background:#eab000; color:#fff; text-align:center; border:#b28602 solid 1px; border-radius:25px;}
+.skin-light-blue .qr-code i{font-size:22px; margin-right:5px;}
+

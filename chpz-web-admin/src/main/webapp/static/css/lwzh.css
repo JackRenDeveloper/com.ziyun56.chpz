@@ -1,0 +1,51 @@
+body {
+	position: relative;
+}
+
+.mapbox {
+	position: relative;
+}
+
+
+
+.mapinfo {
+
+	position: absolute;
+	top: -20px;
+	left: -5px;
+	display: none;
+}
+.gatherList{
+	background:#fff !important;
+	width:300px;
+}
+.gatherList tr{
+	border:#ccc 1px solid;
+	line-height:24px;
+	
+}
+.gatherList th{
+	width:120px;
+	text-align:right;
+}
+.gatherList td{
+	width:160px;
+	border-left:#ccc 1px solid;
+	word-wrap: break-word;word-break:break-all;
+}
+ul.maplist {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.mg3 {
+	margin: 15px;
+}
+.mg2 {
+	margin: 5px;
+}
+.fb{ font-size: 16px; font-weight: bolder;}
+.fred{ color:red;}
+.fgreen{ color:green;}
+
+.bor_magn{margin-bottom:5px;}
